@@ -66,9 +66,9 @@ class Vector2 {
     }
 }
 
-//###COMMONJS###//
-module.exports = Vector2;
-//###COMMONJS###//
 //###ESM###//
 export default Vector2;
 //###ESM###//
+//###COMMONJS###//
+module.exports = Vector2;
+//###COMMONJS###//

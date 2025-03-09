@@ -1,17 +1,14 @@
 "use strict";
 
 class Line2 {
-    /** @type {Point2} */
-    p0;
-    /** @type {Point2} */
-    p1;
-
     /**
      * @param {Point2} p0 
      * @param {Point2} p1 
      */
     constructor(p0, p1) {
+        /** @type {Point2} */
         this.p0 = p0;
+        /** @type {Point2} */
         this.p1 = p1;
     }
 
@@ -71,13 +68,13 @@ class Line2 {
     }
 }
 
-//###COMMONJS###//
-const Point2 = require("./Point2");
-const Vector2 = require("./Vector2");
-module.exports = Line2;
-//###COMMONJS###//
 //###ESM###//
 import Point2 from "./Point2";
 import Vector2 from "./Vector2";
 export default Line2;
 //###ESM###//
+//###COMMONJS###//
+const Point2 = require("./Point2");
+const Vector2 = require("./Vector2");
+module.exports = Line2;
+//###COMMONJS###//

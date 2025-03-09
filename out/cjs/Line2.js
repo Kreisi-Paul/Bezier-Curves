@@ -1,17 +1,14 @@
 "use strict";
 
 class Line2 {
-    /** @type {Point2} */
-    p0;
-    /** @type {Point2} */
-    p1;
-
     /**
      * @param {Point2} p0 
      * @param {Point2} p1 
      */
     constructor(p0, p1) {
+        /** @type {Point2} */
         this.p0 = p0;
+        /** @type {Point2} */
         this.p1 = p1;
     }
 

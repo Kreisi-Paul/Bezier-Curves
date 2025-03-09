@@ -2,47 +2,43 @@
 
 class BezierCurve2 {
     /** @type {Point2} @private */
-    #p0;
     get p0() {
-        return this.#p0
+        return this.p0
     }
     set p0(point) {
         if(Object.getPrototypeOf(point) != Point2.prototype)
             throw new TypeError("Invalid object passed");
-        this.#p0 = point;
+        this.p0 = point;
     }
 
     /** @type {Point2} @private */
-    #p1;
     get p1() {
-        return this.#p1
+        return this.p1
     }
     set p1(point) {
         if(Object.getPrototypeOf(point) != Point2.prototype)
             throw new TypeError("Invalid object passed");
-        this.#p1 = point;
+        this.p1 = point;
     }
 
     /** @type {Point2} @private */
-    #p2;
     get p2() {
-        return this.#p2
+        return this.p2
     }
     set p2(point) {
         if(Object.getPrototypeOf(point) != Point2.prototype)
             throw new TypeError("Invalid object passed");
-        this.#p2 = point;
+        this.p2 = point;
     }
 
     /** @type {Number} @private */
-    #intermediates;
     get intermediates() {
-        return this.#intermediates;
+        return this.intermediates;
     }
     set intermediates(amount) {
         if(typeof amount != "number" && amount%1==0)
             throw new TypeError("Invalid object passed");
-        this.#intermediates = amount;
+        this.intermediates = amount;
     }
 
     /**
@@ -72,7 +68,7 @@ class BezierCurve2 {
     }
 
     /**
-     * Calculates the interpolated Point2s of this curve.
+     * Calculates the interpolated Points of this curve.
      * @returns {Point2[]}
      */
     calculateInterpolatedPoints() {
@@ -83,15 +79,15 @@ class BezierCurve2 {
         /** intermediates between p1 and p2 @type {Point2[]} */
         let q1 = new Array();
 
-        let l0 = new Line2(this.#p0, this.#p1);
-        let l1 = new Line2(this.#p1, this.#p2);
+        let l0 = new Line2(this.p0, this.p1);
+        let l1 = new Line2(this.p1, this.p2);
 
-        q0 = l0.getIntermediates(this.#intermediates, true);
-        q1 = l1.getIntermediates(this.#intermediates, true);
+        q0 = l0.getIntermediates(this.intermediates, true);
+        q1 = l1.getIntermediates(this.intermediates, true);
 
-        for(let i=0; i<=this.#intermediates; i++) {
+        for(let i=0; i<=this.intermediates; i++) {
             let tmpVector = new Line2(q0[i], q1[i]).getVector();
-            tmpVector.multiplyMagnitude((1/this.#intermediates)*i);
+            tmpVector.multiplyMagnitude((1/this.intermediates)*i);
 
             q0[i].applyVector(tmpVector);
 
@@ -102,13 +98,13 @@ class BezierCurve2 {
     }
 }
 
-//###COMMONJS###//
-const Line2 = require("./Line2");
-const Point2 = require("./Point2");
-module.exports = BezierCurve2;
-//###COMMONJS###//
 //###ESM###//
 import Line2 from "./Line2";
 import Point2 from "./Point2";
 export default BezierCurve2;
 //###ESM###//
+//###COMMONJS###//
+const Line2 = require("./Line2");
+const Point2 = require("./Point2");
+module.exports = BezierCurve2;
+//###COMMONJS###//
