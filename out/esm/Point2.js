@@ -29,5 +29,6 @@ class Point2 {
     }
 }
 
-import Vector2 from "./Vector2";
+import Vector2 from "./Vector2.js";
 export default Point2;
+//VERSION:2025-03-20T22:13:03.589Z

@@ -68,6 +68,7 @@ class Line2 {
     }
 }
 
-import Point2 from "./Point2";
-import Vector2 from "./Vector2";
+import Point2 from "./Point2.js";
+import Vector2 from "./Vector2.js";
 export default Line2;
+//VERSION:2025-03-20T22:13:03.589Z

@@ -1,6 +1,6 @@
 {
     "files": [
-        "BezierCurve2.js",
+        "QuadraticBezierCurve2.js",
         "Line2.js",
         "Point2.js",
         "Vector2.js"

@@ -68,6 +68,7 @@ class Line2 {
     }
 }
 
-const Point2 = require("./Point2");
-const Vector2 = require("./Vector2");
+const Point2 = require("./Point2.js");
+const Vector2 = require("./Vector2.js");
 module.exports = Line2;
+//VERSION:2025-03-20T22:13:03.589Z

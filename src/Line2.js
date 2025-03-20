@@ -69,12 +69,12 @@ class Line2 {
 }
 
 //###ESM###//
-import Point2 from "./Point2";
-import Vector2 from "./Vector2";
+import Point2 from "./Point2.js";
+import Vector2 from "./Vector2.js";
 export default Line2;
 //###ESM###//
 //###COMMONJS###//
-const Point2 = require("./Point2");
-const Vector2 = require("./Vector2");
+const Point2 = require("./Point2.js");
+const Vector2 = require("./Vector2.js");
 module.exports = Line2;
 //###COMMONJS###//

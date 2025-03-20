@@ -30,10 +30,10 @@ class Point2 {
 }
 
 //###ESM###//
-import Vector2 from "./Vector2";
+import Vector2 from "./Vector2.js";
 export default Point2;
 //###ESM###//
 //###COMMONJS###//
-const Vector2 = require("./Vector2");
+const Vector2 = require("./Vector2.js");
 module.exports = Point2;
 //###COMMONJS###//

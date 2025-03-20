@@ -63,9 +63,9 @@ class BezierCurve2 {
      */
     getLength() {
         let length = 0;
-        let interpolatedPoint2s = this.calculateInterpolatedPoints();
-        for(let i=0; i<interpolatedPoint2s.length-1; i++) {
-            length += new Line2(interpolatedPoint2s[i], interpolatedPoint2s[i+1]).getLength();
+        let interpolatedPoints = this.calculateInterpolatedPoints();
+        for(let i=0; i<interpolatedPoints.length-1; i++) {
+            length += new Line2(interpolatedPoints[i], interpolatedPoints[i+1]).getLength();
         }
 
         return length;
@@ -102,13 +102,7 @@ class BezierCurve2 {
     }
 }
 
-//###ESM###//
-import Line2 from "./Line2";
-import Point2 from "./Point2";
+import Line2 from "./Line2.js";
+import Point2 from "./Point2.js";
 export default BezierCurve2;
-//###ESM###//
-//###COMMONJS###//
-const Line2 = require("./Line2");
-const Point2 = require("./Point2");
-module.exports = BezierCurve2;
-//###COMMONJS###//
+//VERSION:2025-03-20T22:13:03.589Z

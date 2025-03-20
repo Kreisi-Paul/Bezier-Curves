@@ -67,3 +67,4 @@ class Vector2 {
 }
 
 module.exports = Vector2;
+//VERSION:2025-03-20T22:13:03.589Z
